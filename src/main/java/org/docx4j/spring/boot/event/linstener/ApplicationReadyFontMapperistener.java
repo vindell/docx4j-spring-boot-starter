@@ -121,7 +121,7 @@ public class ApplicationReadyFontMapperistener
 					// 加载字体文件（解决linux环境下无中文字体问题）
 					Resource resource = resourceLoader.getResource(entry.getValue());
 					if (resource.exists()) {
-						PhysicalFonts.addPhysicalFonts(entry.getKey(), resource.getURL());
+						PhysicalFonts.addPhysicalFonts(entry.getKey(), resource.getURI());
 					}
 					LOG.debug("Add PhysicalFont " + entry.getKey());
 				}
