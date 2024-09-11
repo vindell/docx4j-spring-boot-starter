@@ -359,10 +359,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
  		<!-- Docx4j Core -->
-		<docx4j.version>8.3.7</docx4j.version>
+		<docx4j.version>8.3.11</docx4j.version>
 		<docx4j-export-fo.version>${docx4j.version}</docx4j-export-fo.version>
 		<!-- Docx4j ImportXHTML -->
-		<docx4j-importxhtml.version>8.2.1</docx4j-importxhtml.version>
+		<docx4j-importxhtml.version>${docx4j.version}</docx4j-importxhtml.version>
 		<docx4j-xhtmlrenderer.version>3.0.0</docx4j-xhtmlrenderer.version>
 		<!-- Docx4j JAXB -->
 		<docx4j-jaxb.version>${docx4j.version}</docx4j-jaxb.version>
