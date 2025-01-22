@@ -56,15 +56,12 @@
 		pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml">
 		<pkg:xmlData>
 			<w:document
-				xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006"
-				xmlns:o="urn:schemas-microsoft-com:office:office"
+                    xmlns:o="urn:schemas-microsoft-com:office:office"
 				xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 				xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
 				xmlns:v="urn:schemas-microsoft-com:vml"
-				xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
-				xmlns:w10="urn:schemas-microsoft-com:office:word"
-				xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-				xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+                    xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+            >
 				<w:body>
 					<w:p w:rsidR="00D60586" w:rsidRDefault="008C04D8">
 						<w:r>
@@ -87,15 +84,12 @@
 		pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml">
 		<pkg:xmlData>
 			<w:footnotes
-				xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006"
-				xmlns:o="urn:schemas-microsoft-com:office:office"
+                    xmlns:o="urn:schemas-microsoft-com:office:office"
 				xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 				xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
 				xmlns:v="urn:schemas-microsoft-com:vml"
-				xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
-				xmlns:w10="urn:schemas-microsoft-com:office:word"
-				xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-				xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+                    xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+            >
 				<w:footnote w:type="separator" w:id="0">
 					<w:p w:rsidR="008C04D8" w:rsidRDefault="008C04D8" w:rsidP="00D60586">
 						<w:pPr>
@@ -123,15 +117,12 @@
 		pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml">
 		<pkg:xmlData>
 			<w:endnotes
-				xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006"
-				xmlns:o="urn:schemas-microsoft-com:office:office"
+                    xmlns:o="urn:schemas-microsoft-com:office:office"
 				xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 				xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
 				xmlns:v="urn:schemas-microsoft-com:vml"
-				xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
-				xmlns:w10="urn:schemas-microsoft-com:office:word"
-				xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-				xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+                    xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+            >
 				<w:endnote w:type="separator" w:id="0">
 					<w:p w:rsidR="008C04D8" w:rsidRDefault="008C04D8" w:rsidP="00D60586">
 						<w:pPr>
@@ -158,15 +149,13 @@
 	<pkg:part pkg:name="/word/footer1.xml"
 		pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml">
 		<pkg:xmlData>
-			<w:ftr xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006"
-				xmlns:o="urn:schemas-microsoft-com:office:office"
+			<w:ftr
+                    xmlns:o="urn:schemas-microsoft-com:office:office"
 				xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 				xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
 				xmlns:v="urn:schemas-microsoft-com:vml"
-				xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
-				xmlns:w10="urn:schemas-microsoft-com:office:word"
-				xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-				xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+                    xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+            >
 				<w:p w:rsidR="00D60586" w:rsidRDefault="008C04D8">
 					<w:r>
 						<w:t>Text</w:t>
@@ -470,9 +459,9 @@
 			<w:settings xmlns:o="urn:schemas-microsoft-com:office:office"
 				xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 				xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
-				xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word"
-				xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-				xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main">
+				xmlns:v="urn:schemas-microsoft-com:vml"
+                        xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+            >
 				<w:zoom w:percent="100" />
 				<w:bordersDoNotSurroundHeader />
 				<w:bordersDoNotSurroundFooter />
@@ -970,7 +959,7 @@
 		<pkg:xmlData>
 			<Properties
 				xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"
-				xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes">
+            >
 				<Template>Normal.dotm</Template>
 				<TotalTime>0</TotalTime>
 				<Pages>1</Pages>
@@ -994,10 +983,10 @@
 		pkg:contentType="application/vnd.openxmlformats-package.core-properties+xml"
 		pkg:padding="256">
 		<pkg:xmlData>
-			<cp:coreProperties
-				xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"
-				xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
-				xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <cp:coreProperties
+                    xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"
+                    xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				<dc:creator>Administrator</dc:creator>
 				<cp:lastModifiedBy>dreamsummit</cp:lastModifiedBy>
 				<cp:revision>2</cp:revision>

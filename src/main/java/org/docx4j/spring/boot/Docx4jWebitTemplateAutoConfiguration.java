@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import webit.script.Engine;
 
 @Configuration
@@ -23,12 +22,12 @@ public class Docx4jWebitTemplateAutoConfiguration {
 	@Bean
 	public WordprocessingMLWebitTemplate wmlWebitTemplate(
 			Docx4jProperties docx4jProperties,
-			Docx4jWebitTemplateProperties templateProperties, 
+			Docx4jWebitTemplateProperties templateProperties,
 			WordprocessingMLHtmlTemplate wmlHtmlTemplate,
 			@Autowired(required = false) Engine engine) {
 		WordprocessingMLWebitTemplate template = new WordprocessingMLWebitTemplate(wmlHtmlTemplate);
 		template.setEngine(engine);
 		return template;
 	}
-	
+
 }

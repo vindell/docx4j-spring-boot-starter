@@ -1,5 +1,6 @@
 package org.docx4j.spring.boot;
 
+import httl.Engine;
 import org.docx4j.Docx4J;
 import org.docx4j.template.httl.WordprocessingMLHttlTemplate;
 import org.docx4j.template.xhtml.WordprocessingMLHtmlTemplate;
@@ -11,8 +12,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import httl.Engine;
-
 @Configuration
 @AutoConfigureAfter(Docx4jXhtmlTemplateAutoConfiguration.class)
 @ConditionalOnClass({ Docx4J.class, Engine.class , WordprocessingMLHttlTemplate.class })
@@ -23,12 +22,12 @@ public class Docx4jHttlTemplateAutoConfiguration {
 	@Bean
 	public WordprocessingMLHttlTemplate wmlHttlTemplate(
 			Docx4jProperties docx4jProperties,
-			Docx4jHttlTemplateProperties templateProperties, 
+			Docx4jHttlTemplateProperties templateProperties,
 			WordprocessingMLHtmlTemplate wmlHtmlTemplate,
 			@Autowired(required = false) Engine engine) {
 		WordprocessingMLHttlTemplate template = new WordprocessingMLHttlTemplate(wmlHtmlTemplate);
 		template.setEngine(engine);
 		return template;
 	}
-	
+
 }

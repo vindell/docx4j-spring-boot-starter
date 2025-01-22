@@ -15,35 +15,35 @@
  */
 package org.docx4j.spring.boot;
 
-import java.io.File;
-
 import org.docx4j.template.io.WordprocessingMLTemplateWriter;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.io.File;
 
 public class WordprocessingMLTemplateWriter_Test {
 
-	protected WordprocessingMLTemplateWriter wemplateWriter = null;
-	
-	@Before
-	public void Before() {
+	protected static WordprocessingMLTemplateWriter wemplateWriter = null;
+
+	@BeforeEach
+	public void before() {
 		wemplateWriter = WordprocessingMLTemplateWriter.getWMLTemplateWriter();
-		
+
 		//org.eclipse.persistence.jaxb.JAXBContextFactory
 	}
-	
+
 	@Test
 	public void test() throws Exception {
-		
+
 		System.out.println(wemplateWriter.writeToString(new File("D:\\HelloWord14.docx")));
-		
+
 	}
-	
-	@After
+
+	@AfterEach
 	public void after() {
 		wemplateWriter = null;
 	}
-	
-	
+
+
 }

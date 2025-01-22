@@ -15,18 +15,14 @@
  */
 package org.docx4j.spring.boot;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public abstract class WordprocessingMLTemplate_Test {
-	
+
 	protected Map<String, Object> variables = new HashMap<String, Object>();
-	
+
 	public void variables() {
-		
+
 		int count = 30;
         long step = 60 * 1000;
         long time = new Date().getTime() - count * step;
@@ -46,7 +42,7 @@ public abstract class WordprocessingMLTemplate_Test {
         variables.put("source", source);
         variables.put("target", target);
         variables.put("format", false);
-        
+
 	}
-	
+
 }

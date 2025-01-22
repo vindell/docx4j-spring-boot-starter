@@ -1,14 +1,6 @@
 package org.docx4j.spring.boot.event.linstener;
 
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-
-import org.docx4j.fonts.BestMatchingMapper;
-import org.docx4j.fonts.IdentityPlusMapper;
-import org.docx4j.fonts.Mapper;
-import org.docx4j.fonts.PhysicalFont;
-import org.docx4j.fonts.PhysicalFonts;
+import org.docx4j.fonts.*;
 import org.docx4j.spring.boot.Docx4jAutoConfiguration;
 import org.docx4j.spring.boot.Docx4jProperties;
 import org.docx4j.spring.boot.utils.StringUtils;
@@ -22,13 +14,17 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.CollectionUtils;
 
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
 public class ApplicationReadyFontMapperistener
 		implements ApplicationListener<ApplicationReadyEvent>, ResourceLoaderAware {
 
 	protected static Logger LOG = LoggerFactory.getLogger(Docx4jAutoConfiguration.class);
 	protected ResourceLoader resourceLoader;
 	protected final Docx4jProperties docx4jProperties;
-	
+
 	public ApplicationReadyFontMapperistener(Docx4jProperties docx4jProperties) {
 		this.docx4jProperties  = docx4jProperties;
 	}
@@ -38,7 +34,7 @@ public class ApplicationReadyFontMapperistener
 		if(docx4jProperties.isDiscoverFonts()) {
 			// 使用独立线程初始化字体信息
 			new Thread() {
-				
+
 				@Override
 				public void run() {
 					try {
@@ -57,16 +53,16 @@ public class ApplicationReadyFontMapperistener
 						final String osName = System.getProperty("os.name");
 						if (osName.startsWith("Windows")) {
 							/*
-							 * 
+							 *
 							 * This mapper automatically maps document fonts for which the exact font is
 							 * physically available. Think of this as an identity mapping. For this reason,
 							 * it will work best on Windows, or a system on which Microsoft fonts have been
 							 * installed. （此映射器自动映射确切可用的文档字体，将此视为标识映射；基于这个原因，它在Windows系统或安装了微软字体库的系统运行的更好。）
 							 * You can manually add your own additional mappings if you wish.
 							 * 如果需要，你可以手动添加自己的字体映射
-							 * 
+							 *
 							 * 1、 自动检测系统上可用的字体 PhysicalFonts.discoverPhysicalFonts();
-							 * 
+							 *
 							 */
 							Mapper fontMapper = new IdentityPlusMapper();
 							defaultFontMapper(fontMapper);
@@ -76,20 +72,20 @@ public class ApplicationReadyFontMapperistener
 							/*
 							 * This mapper uses Panose to guess the physical font which is a closest fit for
 							 * the font used in the document. （这个映射器使用Panose算法猜测最适合这个文档使用的物理字体。）
-							 * 
+							 *
 							 * Panose是一种依照字体外观来进行分类的方法。我们可以通过PANOSE体系将字体的外观特征进行整理，并且与其它字体归类比较。
 							 * Panose的原形在1985年由Benjamin
 							 * Bauermeister开发，当时一种字体由7位16进制数字定义，现在则发展为10位，也就是字体的十种特征。这每一位数字都给出了它定义的一种视觉外观的量度
 							 * ，如笔划的粗细或是字体衬线的样式等。 Panose定义的范围：Latin Text，Latin Script，Latin
 							 * Decorative，Iconographic，Japanese Text，Cyrillic Text，Hebrew。
-							 * 
+							 *
 							 * It is most likely to be suitable on Linux or OSX systems which don't have
 							 * Microsoft's fonts installed. （它很可能适用于没有安装Microsoft字体的Linux或OSX系统。）
-							 * 
+							 *
 							 * 1、获取Microsoft字体我们需要这些：a.在Microsoft平台上，嵌入PDF输出; b. docx4all - 所有平台 - 填充字体下拉列表
 							 * setupMicrosoftFontFilenames(); 2、 自动检测系统上可用的字体
 							 * PhysicalFonts.discoverPhysicalFonts();
-							 * 
+							 *
 							 */
 							Mapper fontMapper = new BestMatchingMapper();
 							defaultFontMapper(fontMapper);
@@ -161,7 +157,7 @@ public class ApplicationReadyFontMapperistener
 		fontMapper.put("华文仿宋", PhysicalFonts.get("STFangsong"));
 		fontMapper.put("华文中宋", PhysicalFonts.get("STZhongsong"));
 		fontMapper.put("华文行楷", PhysicalFonts.get("STXingkai"));
-		
+
 	}
 
 	@Override

@@ -15,10 +15,10 @@
  */
 package org.docx4j.spring.boot;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(Docx4jProperties.PREFIX)
 public class Docx4jProperties {
@@ -38,7 +38,7 @@ public class Docx4jProperties {
 	 * Enable Docx4j Discover Fonts .
 	 */
 	private boolean discoverFonts = false;
-	
+
 	/** Font Mapper. */
 	private Map<String /* Font Name */, String /* Location */> fontMapper = new LinkedHashMap<String, String>();
 	/** Font Fix Mapper. 解决中文乱码问题 */
@@ -67,7 +67,7 @@ public class Docx4jProperties {
 	public void setLandscape(boolean landscape) {
 		this.landscape = landscape;
 	}
-	
+
 	public boolean isDiscoverFonts() {
 		return discoverFonts;
 	}

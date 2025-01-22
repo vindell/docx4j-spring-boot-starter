@@ -1,7 +1,5 @@
 package org.docx4j.spring.boot;
 
-import java.io.IOException;
-
 import org.docx4j.Docx4J;
 import org.docx4j.convert.out.ConversionHTMLScriptElementHandler;
 import org.docx4j.convert.out.ConversionHTMLStyleElementHandler;
@@ -25,6 +23,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.io.IOException;
+
 @Configuration
 @AutoConfigureAfter(Docx4jAutoConfiguration.class)
 @ConditionalOnClass({ Docx4J.class, WordprocessingMLDocxTemplate.class })
@@ -47,7 +47,7 @@ public class Docx4jDocxTemplateAutoConfiguration {
 		WordprocessingMLDocxSaxTemplate template = new WordprocessingMLDocxSaxTemplate();
 		return template;
 	}
-	
+
 	@Bean
 	public WordprocessingMLDocxStAXTemplate wmlDocxStAXTemplate()
 			throws IOException {
